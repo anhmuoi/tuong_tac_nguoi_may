@@ -1,0 +1,28 @@
+.rank {
+    width: 278px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 10px;
+
+    &__left {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &-text1 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        &-text2 {
+            font-size: 13px;
+            color: #4b4b4b
+        }
+    }
+    &__right {
+        padding: 5px;
+        display: flex;
+        align-items: start;
+    }
+}

@@ -1,0 +1,102 @@
+.addQuestion {
+    width: 555px;
+    border-radius: 5px;
+    background-color: white;
+    &__text {
+        background-color: white !important;
+        textarea {
+            height: 60px !important;
+            // background-color: white !important;
+        }
+    }
+    &__interest {
+        padding: 10px;
+        width: 96%;
+        &-item {
+            background-color: #f5f7fa;
+            width: 80px;
+            padding: 5px;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #8c8c8c;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__action {
+        background-color: #f5f7fa;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgb(236, 234, 234);
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        &-item {
+            background-color: white;
+            display: flex;
+            width: 100px;
+            padding: 5px;
+            border-radius: 30px;
+            text-align: center;
+            align-items: center;
+            gap: 5px;
+            justify-content: center;
+            color: #8c8c8c;
+            border: 1px solid rgb(236, 234, 234);
+            &:hover {
+                cursor: pointer;
+            }
+            font-size: 14px;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .submit {
+            padding: 5px 10px;
+            background-color: #f05050;
+            color: white;
+            border-radius: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__connect {
+        padding: 3px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid rgb(236, 234, 234);
+        color: #8c8c8c;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: auto;
+
+        &__action {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width: 330px) {
+        width: auto;
+
+        &__left {
+            flex-wrap: wrap;
+            justify-content: center;
+            &-item {
+            }
+        }
+    }
+}

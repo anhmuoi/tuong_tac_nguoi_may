@@ -1,0 +1,65 @@
+.email {
+    width: 278px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    &__text1 {
+        font-weight: bold;
+    }
+    &__text2 {
+        font-size: 13px;
+        font-weight: 400;
+        color: #8c8c8c
+    }
+    &__img {
+        margin-top: 30px;
+        img {
+            width: 160px;
+        }
+    }
+    &__icon {
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        background-color: white;
+        box-shadow: #8c8c8c;
+        border: 1px solid rgb(195, 190, 190);
+        img {
+            width: 31px;
+            height: 31px;
+        }
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px;
+        border: 1px solid #e3dada;
+        border-radius: 30px;
+        flex: 1;
+        background-color: #eae5e5;
+        input {
+            border: none;
+            background: none;
+        }
+    }
+    #input:focus {
+        outline: none;
+    }
+    &__send {
+        background-color: white;
+        border-radius: 20px;
+        padding: 3px 10px;
+        text-align: center;
+    }
+}

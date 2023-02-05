@@ -1,0 +1,37 @@
+.cardConnect {
+    width: 143px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+
+    &__img {
+        width: 143px;
+        height: 101px;
+    }
+    &__content {
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__title {
+        font-weight: 600;
+        margin: 10px 0;
+        text-align: center;
+    }
+    &__btn {
+        padding: 5px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: #f05050;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    &__text {
+        font-weight: bold;
+    }
+}

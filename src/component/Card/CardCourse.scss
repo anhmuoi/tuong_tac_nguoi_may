@@ -1,0 +1,59 @@
+.card {
+    width: 211px;
+    border-radius: 5px;
+    min-width: 211;
+
+    max-width: 211;
+    &__img {
+        width: 211px;
+        height: 101px;
+    }
+    &__content {
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__title {
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    &__author {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(171, 164, 164);
+    }
+    &__rate {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .star {
+            font-weight: bold;
+            color: darkorange;
+        }
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(171, 164, 164);
+    }
+    &__learn {
+        font-size: 12px;
+        font-weight: 600;
+        color: gray;
+    }
+    &__time {
+        font-size: 12px;
+        font-weight: 600;
+        color: gray;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        font-size: 14px;
+        font-weight: 600;
+        color: black;
+    }
+}

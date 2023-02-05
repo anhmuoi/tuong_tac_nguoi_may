@@ -1,0 +1,51 @@
+.connect {
+    width: 555px;
+    background-color: #fff;
+    position: relative;
+    &__heading {
+        font-weight: bold;
+        background-color: #f5f7fa;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &__card {
+        display: flex;
+        overflow-x: scroll;
+        gap: 20px;
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+    .arrow_btn {
+        position: absolute;
+        top: 40%;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    &__see {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+        background-color: #f7f8fa;
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        &:hover {
+            color: #f05050;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100vw;
+     }
+     
+}
+.connect__card::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: #f5f5f5;
+    display: none;
+}
