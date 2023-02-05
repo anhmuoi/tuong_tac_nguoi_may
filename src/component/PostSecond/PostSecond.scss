@@ -28,7 +28,7 @@
     &__desc {
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 5px;
     }
     &__name {
