@@ -2,6 +2,7 @@ import { AccountCircle, BookmarkBorder, Image, MoreHoriz, Share, Textsms, ThumbU
 import React from 'react';
 import './PostSecond.scss';
 import javaImg from '../../assets/Images/java.png';
+import me from '../../assets/Images/me.png';
 function PostSecond() {
     return (
         <div className="postSecond">
@@ -16,9 +17,7 @@ function PostSecond() {
                     </div>
                 </div>
                 <div className="postSecond__header-right">
-                    <div className="postSecond__follow">
-                        Follow
-                    </div>
+                    <div className="postSecond__follow">Follow</div>
                     <div className="postSecond__mark">
                         <BookmarkBorder></BookmarkBorder>
                     </div>
@@ -60,7 +59,7 @@ function PostSecond() {
 
             <div className="postSecond__comment">
                 <div className="postSecond__avatar">
-                    <AccountCircle style={{ width: 50, height: 50 }} />
+                    <img src={me} alt="" style={{ width: 40, height: 40, borderRadius: '50%' }} />
                 </div>
                 <div className="postSecond__input">
                     <input type="text" multiple id="input" placeholder="Write your comment"></input>

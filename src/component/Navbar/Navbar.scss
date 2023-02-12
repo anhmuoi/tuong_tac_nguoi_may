@@ -16,6 +16,7 @@
             position: relative !important;
             top: -5px !important;
         }
+        cursor: pointer;
     }
     &__search {
         // height: 35px;
@@ -34,25 +35,34 @@
         align-items: center;
         justify-content: center;
         color: #2b2b2b;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__icon {
         color: #2b2b2b;
     }
     &__text {
         font-weight: 600;
+        &:hover {
+            border-bottom: 3px solid;
+        }
     }
 
     &__menu {
         display: none;
     }
+    .active {
+        border-bottom: 3px solid;
+    }
 
     @media screen and (max-width: 767px) {
-       &__page {
-        display: none;
-       }
-       &__menu {
-        display: block;
-        margin: 5px;
-       }
+        &__page {
+            display: none;
+        }
+        &__menu {
+            display: block;
+            margin: 5px;
+        }
     }
 }

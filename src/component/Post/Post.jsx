@@ -1,13 +1,18 @@
 import { AccountCircle, BookmarkBorder, Image, MoreHoriz, Share, Textsms, ThumbUpOffAlt } from '@mui/icons-material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Post.scss';
+import avt from '../../assets/Images/profile.png';
+import me from '../../assets/Images/me.png';
 function Post() {
+    const navigate = useNavigate();
+
     return (
         <div className="post">
             <div className="post__header">
                 <div className="post__header-left">
-                    <div className="post__avatar">
-                        <AccountCircle style={{ width: 50, height: 50 }} />
+                    <div className="post__avatar" onClick={() => navigate('/profile/Ranbirkapoor')}>
+                        <img src={avt} alt="" style={{ width: 50, height: 50, borderRadius: '50%' }} />
                     </div>
                     <div className="post__desc">
                         <div className="post__name">Ranbir kapoor</div>
@@ -56,7 +61,7 @@ function Post() {
 
             <div className="post__comment">
                 <div className="post__avatar">
-                    <AccountCircle style={{ width: 50, height: 50 }} />
+                    <img src={me} alt="" style={{ width: 40, height: 40, borderRadius: '50%' }} />
                 </div>
                 <div className="post__input">
                     <input type="text" multiple id="input" placeholder="Write your comment"></input>

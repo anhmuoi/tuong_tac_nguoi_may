@@ -16,6 +16,7 @@ import {
 import { List } from '@mui/material';
 import React from 'react';
 import './LeftSideBar.scss';
+import me from '../../assets/Images/me.png';
 
 const dataAction = [
     {
@@ -78,7 +79,7 @@ function LeftSideBar() {
         <div className="leftSide">
             <div className="leftSide__info">
                 <div className="logo">
-                    <AccountCircle style={{ width: 50, height: 50 }} />
+                    <img src={me} alt="" style={{ width: 50, height: 50, borderRadius: '50%' }} />
                 </div>
                 <div className="name">
                     <div className="name_acc">Nguyễn Mười</div>

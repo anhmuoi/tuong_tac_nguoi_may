@@ -1,0 +1,36 @@
+.filter {
+    width: 278px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    &__heading {
+        width: auto;
+        padding: 10px;
+        font-weight: bold;
+        background-color: #f5f7fa;
+        color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+    &__content {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__name {
+        padding: 10px;
+        &:hover {
+            background-color: #dbdde1;
+            cursor: pointer;
+        }
+    }
+    .active {
+        background-color: #dbdde1;
+        cursor: pointer;
+        border-left: 3px solid rgba(240, 80, 80, 0.9);
+    }
+}

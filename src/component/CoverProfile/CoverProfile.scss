@@ -1,0 +1,106 @@
+.cover {
+    margin: 0 auto;
+    max-width: 1140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    &__big {
+        height: 323px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__logo {
+        border-radius: 50%;
+        padding: 3px;
+        border: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        img {
+            border-radius: 50%;
+        }
+    }
+    &__name {
+        font-weight: bold;
+        color: black;
+        font-size: 25px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 10px;
+        gap: 30px;
+        font-weight: 500;
+    }
+
+    &__action {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        // padding: 0 30px;
+        &-left {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            height: 100%;
+            div {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: #dfe5eb;
+                    border-bottom: 3px solid #f05050;
+                    cursor: pointer;
+                }
+            }
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 10px;
+        }
+    }
+    &__connect {
+        padding: 5px 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: #f05050;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        width: 60%;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 1024px) {
+        &__info {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__action {
+            flex-direction: column;
+            padding: 30px;
+            gap: 15px;
+            &-right {
+                gap: 5px;
+            }
+        }
+    }
+    
+}

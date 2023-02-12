@@ -1,0 +1,15 @@
+.profile {
+    background-color: #dfe5eb;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+    }
+    
+}

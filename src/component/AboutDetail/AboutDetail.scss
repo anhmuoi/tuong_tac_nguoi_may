@@ -1,0 +1,33 @@
+.aboutDetail {
+    width: 278px;
+    border-radius: 5px;
+    background-color: white;
+    &__heading {
+        font-weight: bold;
+        background-color: #f5f7fa;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+    &__content {
+        padding: 10px;
+        color: rgba(44, 46, 47, 0.85);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__text1 {
+        font-size: 14px;
+    }
+    &__text3 {
+        color: #f05050;
+        font-weight: bold;
+    }
+    &__text4,
+    &__text5,
+    &__text6 {
+        display: flex;
+        align-items: center;
+    }
+}

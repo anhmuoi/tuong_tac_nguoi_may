@@ -1,0 +1,87 @@
+.connectDetail {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 100px;
+    &__right {
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 847.5px;
+        flex: 1;
+        background-color: white;
+    }
+    &__heading {
+        font-weight: bold;
+        background-color: #f5f7fa;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+    &__content {
+        padding: 10px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+        border-bottom: 1px solid #dfe0e8;
+    }
+    &__avatar {
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        &-right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    &__company {
+        font-size: 14px;
+        color: rgba(44, 46, 47, 0.6);
+    }
+    &__time {
+        font-size: 12px;
+        color: rgba(44, 46, 47, 0.6);
+    }
+    &__connect {
+        padding: 5px 15px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: #f05050;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        width: 60%;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__left {
+            display: none;
+        }
+    }
+}

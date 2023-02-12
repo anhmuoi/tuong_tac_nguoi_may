@@ -1,0 +1,39 @@
+.reward {
+    width: 278px;
+    background-color: white;
+    border-radius: 5px;
+    &__heading {
+        font-weight: 500;
+        background-color: #f5f7fa;
+        padding: 10px;
+        border-bottom: 1px solid rgb(223, 223, 223);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        border-bottom: 1px solid rgb(223, 223, 223);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__point {
+        color: rgb(8, 216, 8);
+        font-weight: 500;
+    }
+    &__view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        color: rgb(114, 110, 110);
+        cursor: pointer;
+    }
+}
