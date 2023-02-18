@@ -4,22 +4,22 @@ import './CardCourse.scss';
 import { Card } from '@mui/material';
 function CardCourse({ data }) {
     return (
-        <Card className="card" style={{minWidth: 211, maxWidth: 211}}>
-            <img className="card__img" src={data} alt=""></img>
+        <Card className="card" style={{ minWidth: data.minWidth, maxWidth: data.maxWidth }}>
+            <img className="card__img" style={{ width: data.minWidth }} src={data.img} alt=""></img>
             <div className="card__content">
-                <div className="card__title">Free SEO training...</div>
-                <div className="card__author">by Digital Marketing...</div>
+                <div className="card__title">{data.title}</div>
+                <div className="card__author">{data.author}</div>
                 <div className="card__rate">
-                    <div className="star">4.6</div>
-                    <div>(9 Ratings)</div>
+                    <div className="star">{data.rate}</div>
+                    <div>({data.numberRating} Ratings)</div>
                 </div>
-                <div className="card__learn">Learners</div>
+                <div className="card__learn">{data.status}</div>
                 <div className="card__time">
                     <AccessTime />
-                    Validity Unlimited
+                    {data.time}
                 </div>
                 <div className="card__price">
-                    <div>Free</div>
+                    <div>{data.price}</div>
                 </div>
             </div>
         </Card>

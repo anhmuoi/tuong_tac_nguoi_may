@@ -9,6 +9,8 @@ import ProfileDetail from './component/ProfileDetail/ProfileDetail.jsx';
 import ConnectDetail from './component/ConnectDetail/ConnectDetail.jsx';
 import ProfilePage from './component/ProfilePage/ProfilePage.jsx';
 import LeaderBoard from './page/LeaderBoard/LeaderBoard.jsx';
+import Course from './page/Course/Course.jsx';
+import Login from './page/Login/Login.jsx';
 
 function App() {
     return (
@@ -23,7 +25,9 @@ function App() {
                         <Route path="page" element={<ProfilePage />}></Route>
                     </Route>
                     <Route path="leader-board" element={<LeaderBoard />}></Route>
+                    <Route path="course" element={<Course />}></Route>
                 </Route>
+                <Route path="/login" element={<Login />}></Route>
             </Routes>
         </BrowserRouter>
     );

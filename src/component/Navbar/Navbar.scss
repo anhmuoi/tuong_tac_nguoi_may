@@ -56,6 +56,27 @@
         border-bottom: 3px solid;
     }
 
+    // login page
+    &__auth {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .active {
+            background-color: #f05050;
+            color: white;
+        }
+    }
+    &__login,
+    &__signUp {
+        padding: 5px 10px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid #dfe0e8;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
     @media screen and (max-width: 767px) {
         &__page {
             display: none;

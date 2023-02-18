@@ -17,6 +17,7 @@ import { List } from '@mui/material';
 import React from 'react';
 import './LeftSideBar.scss';
 import me from '../../assets/Images/me.png';
+import { useNavigate } from 'react-router-dom';
 
 const dataAction = [
     {
@@ -75,6 +76,14 @@ const dataProduct = [
 ];
 
 function LeftSideBar() {
+    const navigate = useNavigate();
+
+    const handleClickCourse = (text) => {
+        if (text === 'Courses') {
+            navigate('course')
+        }
+    };
+
     return (
         <div className="leftSide">
             <div className="leftSide__info">
@@ -126,7 +135,7 @@ function LeftSideBar() {
                 <p className="leftSide__page-title">Products</p>
                 <div className="leftSide__action">
                     {dataProduct.map((item, key) => (
-                        <div key={key} className="leftSide__action-item">
+                        <div key={key} className="leftSide__action-item" onClick={() => handleClickCourse(item.text)}>
                             <div>{item.icon}</div>
                             <div>{item.text}</div>
                         </div>
