@@ -62,16 +62,7 @@ const dataAction = [
         icon: <Star></Star>,
         text: 'Interests',
     },
-    {
-        id: 6,
-        icon: <Snowshoeing></Snowshoeing>,
-        text: 'Career Counselling',
-    },
-    {
-        id: 7,
-        icon: <Cabin></Cabin>,
-        text: 'Campus Hiring',
-    },
+   
 ];
 
 const dataPage = [
@@ -91,16 +82,6 @@ const dataProduct = [
         id: 1,
         icon: <Dns></Dns>,
         text: 'Courses',
-    },
-    {
-        id: 2,
-        icon: <LibraryBooks></LibraryBooks>,
-        text: 'E-books',
-    },
-    {
-        id: 3,
-        icon: <DocumentScanner></DocumentScanner>,
-        text: 'Test Series',
     },
 ];
 

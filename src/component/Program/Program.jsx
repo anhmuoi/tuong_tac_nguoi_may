@@ -5,7 +5,7 @@ import './Program.scss';
 function Program() {
     return (
         <div className="program">
-            <div className="program__heading">About This Course</div>
+            <div className="program__heading">Course Curriculum</div>
             <div className="program__content">
                 <div className="program__text1">Post Graduate Program in Digital Marketing</div>
             </div>

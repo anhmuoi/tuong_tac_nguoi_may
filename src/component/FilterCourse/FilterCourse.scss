@@ -1,0 +1,91 @@
+.filterCourse {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    &__header {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f05050;
+        color: #fff;
+        font-weight: bold;
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+    }
+    &__page {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #686868;
+        font-weight: 400;
+        &-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .active {
+                background-color: black;
+                color: white;
+            }
+        }
+        &-item {
+            padding: 5px 25px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid rgb(205, 194, 194);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+    &__select {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #686868;
+        font-weight: 400;
+        &-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &-item {
+            width: 250px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
