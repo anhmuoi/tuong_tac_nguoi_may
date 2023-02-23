@@ -467,7 +467,7 @@ function Course() {
     };
     return (
         <div className="courseAll">
-            <Modal style={{ width: '40%', left: '30%', top: '5%' }} open={openFilter} onClose={handleCloseFilter}>
+            <Modal style={{ width: '40%', left: '30%', top: '2%' }} open={openFilter} onClose={handleCloseFilter}>
                 <FilterCourse handleCloseFilter={handleCloseFilter}/>
             </Modal>
             <div className="courseAll__image">

@@ -3,7 +3,7 @@
     border-radius: 10px;
     overflow: hidden;
     &__header {
-        padding: 15px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,7 +21,7 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
     &__price {
         display: flex;
