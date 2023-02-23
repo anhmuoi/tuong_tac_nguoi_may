@@ -100,6 +100,7 @@
             color: #8c8c8c;
             &:hover {
                 color: #f05050;
+                cursor: pointer;
             }
         }
 
@@ -137,8 +138,10 @@
         cursor: pointer;
     }
 
+    .isLike {
+        color: #f05050;
+    }
     @media screen and (max-width: 767px) {
         width: 100vw;
-     }
-     
+    }
 }

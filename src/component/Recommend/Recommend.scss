@@ -20,6 +20,7 @@
         gap: 5px;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
     }
     &__avatar {
         img {
@@ -44,7 +45,7 @@
         gap: 5px;
         font-size: 15px;
         font-weight: 400;
-        color: rgb(132, 129, 129)
+        color: rgb(132, 129, 129);
     }
 
     &__view {

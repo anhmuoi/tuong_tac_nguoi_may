@@ -2,9 +2,15 @@ import { AccessTime } from '@mui/icons-material';
 import React from 'react';
 import './CardCourse.scss';
 import { Card } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 function CardCourse({ data }) {
+    const navigate = useNavigate();
     return (
-        <Card className="card" style={{ minWidth: data.minWidth, maxWidth: data.maxWidth }}>
+        <Card
+            onClick={() => navigate('/detail-course')}
+            className="card"
+            style={{ minWidth: data.minWidth, maxWidth: data.maxWidth, cursor: 'pointer' }}
+        >
             <img className="card__img" style={{ width: data.minWidth }} src={data.img} alt=""></img>
             <div className="card__content">
                 <div className="card__title">{data.title}</div>

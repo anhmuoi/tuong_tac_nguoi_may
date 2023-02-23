@@ -1,0 +1,132 @@
+.cmt {
+    width: 555px;
+    border-radius: 5px;
+    background-color: white;
+    &__heading {
+        font-weight: bold;
+        background-color: #f5f7fa;
+        padding: 10px;
+        border-bottom: 1px solid rgb(223, 223, 223);
+    }
+    &__body {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+    }
+    &__percent {
+        width: 100%;
+    }
+    &__rate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__line {
+        width: 70%;
+        font-size: 12px;
+        display: inline-block;
+    }
+    &__star {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        img {
+            color: yellow;
+        }
+    }
+    &__line-wrapper {
+        width: 100%;
+        background-color: #f0f5f7;
+        border-radius: 5px;
+    }
+    &__totalRate {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+        &-num {
+            padding: 40px;
+            box-shadow: 0 3px 8px rgb(0 0 0 / 30%);
+            overflow: hidden;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            img {
+                width: 14px;
+                height: 14px;
+            }
+            &-text1 {
+                font-weight: bold;
+            }
+            &-star {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+            }
+        }
+        &-detail {
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    &__review {
+        display: flex;
+        align-items: center;
+        padding: 30px 10px 30px 10px;
+        justify-content: space-between;
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 0.5;
+        }
+        &-avt {
+            border-radius: 100rem;
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        &-name {
+            line-height: 14px;
+            color: #2c2e2f;
+            font-weight: 500;
+        }
+        &-time {
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(44, 46, 47, 0.6);
+            clear: both;
+        }
+        &-text {
+            font-size: 14px;
+            margin-right: 5px;
+            color: #8c8c8c;
+            font-weight: 500;
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 0.5;
+        }
+        &-star {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}

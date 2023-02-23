@@ -11,11 +11,15 @@ import ProfilePage from './component/ProfilePage/ProfilePage.jsx';
 import LeaderBoard from './page/LeaderBoard/LeaderBoard.jsx';
 import Course from './page/Course/Course.jsx';
 import Login from './page/Login/Login.jsx';
+import FanPage from './page/FanPage/FanPage.jsx';
+import Inbox from './page/Inbox/Inbox.jsx';
+import DetailCourse from './page/DetailCourse/DetailCourse.jsx';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/login" element={<Login />}></Route>
                 <Route path="/" element={<Navbar />}>
                     <Route index element={<Home />}></Route>
                     <Route path="profile/:name" element={<Profile />}>
@@ -24,10 +28,13 @@ function App() {
                         <Route path="connection" element={<ConnectDetail />}></Route>
                         <Route path="page" element={<ProfilePage />}></Route>
                     </Route>
+                    <Route path="page/:name" element={<FanPage />}></Route>
                     <Route path="leader-board" element={<LeaderBoard />}></Route>
+                    <Route path="inbox/:name" element={<Inbox />}></Route>
+                    <Route path="detail-course" element={<DetailCourse />}></Route>
+
                     <Route path="course" element={<Course />}></Route>
                 </Route>
-                <Route path="/login" element={<Login />}></Route>
             </Routes>
         </BrowserRouter>
     );

@@ -85,7 +85,7 @@ const dataCard = [
     },
 ];
 
-function Course() {
+function Course({ title }) {
     const [isHorizontalScrollEnabled, setIsHorizontalScrollEnabled] = useState(false);
 
     useEffect(() => {
@@ -118,10 +118,10 @@ function Course() {
     };
     return (
         <div className="course">
-            <div className="course__heading">Popular Products</div>
+            <div className="course__heading">{title ? title : 'Popular Products'}</div>
             <div className="course__card" id="imageList">
                 {dataCard.map((item) => (
-                    <CardCourse key={item.id} data={item} />
+                    <CardCourse key={item.id} data={item}  />
                 ))}
             </div>
             {isHorizontalScrollEnabled && (

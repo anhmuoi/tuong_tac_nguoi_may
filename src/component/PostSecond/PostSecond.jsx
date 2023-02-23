@@ -1,18 +1,24 @@
 import { AccountCircle, BookmarkBorder, Image, MoreHoriz, Share, Textsms, ThumbUpOffAlt } from '@mui/icons-material';
-import React from 'react';
+import React, { useState } from 'react';
 import './PostSecond.scss';
 import javaImg from '../../assets/Images/java.png';
 import me from '../../assets/Images/me.png';
-function PostSecond() {
+import { useNavigate } from 'react-router-dom';
+function PostSecond({ name, avatar }) {
+    const [like, setLike] = useState(false);
+    const navigation = useNavigate();
+    const clickLike = () => {
+        setLike(!like);
+    };
     return (
         <div className="postSecond">
             <div className="postSecond__header">
                 <div className="postSecond__header-left">
                     <div className="postSecond__avatar">
-                        <img src={javaImg} style={{ width: 50, height: 50 }} alt="" />
+                        <img src={avatar} style={{ width: 50, height: 50 }} alt="" />
                     </div>
                     <div className="postSecond__desc">
-                        <div className="postSecond__name">Java The Complete Guide</div>
+                        <div className="postSecond__name">{name}</div>
                         <div className="postSecond__time">16 hr 33 min </div>
                     </div>
                 </div>
@@ -43,9 +49,9 @@ function PostSecond() {
             <div className="postSecond__link"></div>
 
             <div className="postSecond__action">
-                <div className="postSecond__action-item">
+                <div onClick={() => clickLike()} className={`postSecond__action-item ${like ? 'isLike' : ''}`}>
                     <ThumbUpOffAlt />
-                    <div className="postSecond__action-text">Like</div>
+                    <div className={`postSecond__action-text`}>Like</div>
                 </div>
                 <div className="postSecond__action-item">
                     <Textsms />
@@ -58,7 +64,7 @@ function PostSecond() {
             </div>
 
             <div className="postSecond__comment">
-                <div className="postSecond__avatar">
+                <div className="postSecond__avatar" onClick={() => navigation('/profile/me')}>
                     <img src={me} alt="" style={{ width: 40, height: 40, borderRadius: '50%' }} />
                 </div>
                 <div className="postSecond__input">

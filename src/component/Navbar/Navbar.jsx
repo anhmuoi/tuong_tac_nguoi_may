@@ -1,47 +1,58 @@
 import { AccountCircle, EmojiEvents, Forum, Home, MenuOpen, People, Reorder, Search, Work } from '@mui/icons-material';
-import { InputAdornment, Menu, TextField } from '@mui/material';
-import React from 'react';
+import { Fade, InputAdornment, Menu, Paper, Popper, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/Images/Logo.png';
 import './Navbar.scss';
 import me from '../../assets/Images/me.png';
+import mess1 from '../../assets/Images/mess1.png';
 
 const dataPage = [
     {
+        id: 1,
         icon: <Home color="#2b2b2b" />,
         text: 'Home',
         route: '/',
     },
+
     {
-        icon: <Work color="#2b2b2b" />,
-        text: 'Jobs',
-        route: '/jobs',
-    },
-    {
+        id: 2,
         icon: <EmojiEvents color="#2b2b2b" />,
         text: 'LeaderBroad',
         route: '/leader-board',
     },
+
     {
-        icon: <People color="#2b2b2b" />,
-        text: 'Connection',
-        route: '/connection',
-    },
-    {
+        id: 3,
         icon: <Forum color="#2b2b2b" />,
         text: 'Message',
         route: '/message',
     },
     {
+        id: 4,
         icon: <img src={me} alt="" style={{ width: 20, height: 20, borderRadius: '50%' }} />,
         text: 'Me',
-        route: '/me',
+        route: '/login',
     },
 ];
 
 function Navbar() {
     const navigate = useNavigate();
     const location = useLocation();
+    const [openMess, setOpenMess] = useState(false);
+    const [openLogout, setOpenLogout] = useState(false);
+
+    const handleClickNav = (id, route) => {
+        if (id === 3) {
+            setOpenMess(!openMess);
+            setOpenLogout(false);
+        } else if (id === 4) {
+            setOpenMess(false);
+            setOpenLogout(!openLogout);
+        } else {
+            navigate(route);
+        }
+    };
     return (
         <div>
             <div className="nav">
@@ -64,9 +75,31 @@ function Navbar() {
                 </div>
                 <div className="nav__page">
                     {dataPage.map((item, key) => (
-                        <div className="nav__item" key={key} onClick={() => navigate(item.route)}>
+                        <div className="nav__item" key={key} onClick={() => handleClickNav(item.id, item.route)}>
                             <div className="nav__icon">{item.icon}</div>
                             <div className={`nav__text ${location.pathname === item.route ? 'active' : ''}`}>{item.text}</div>
+                            {item.id === 4 && openLogout ? (
+                                <>
+                                    <div className="nav__logout">
+                                        <div onClick={() => navigate('/profile/me')}>Profile</div>
+                                        <div onClick={() => navigate('/login')}>Logout</div>
+                                    </div>
+                                </>
+                            ) : null}
+                            {item.id === 3 && openMess ? (
+                                <>
+                                    <div className="nav__popup">
+                                        <div className="nav__popup-header">Recent Messages</div>
+                                        <div className="nav__popup-item" onClick={() => navigate('/inbox/nguyenvanA')}>
+                                            <div className="nav__popup-left">
+                                                <img src={mess1} alt="" />
+                                                <div>nguyen van A</div>
+                                            </div>
+                                            <div className="nav__popup-time">19 Feb 1:24 PM</div>
+                                        </div>
+                                    </div>
+                                </>
+                            ) : null}
                         </div>
                     ))}
                 </div>

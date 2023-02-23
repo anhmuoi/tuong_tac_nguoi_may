@@ -1,21 +1,24 @@
 import { AccountCircle, BookmarkBorder, Image, MoreHoriz, Share, Textsms, ThumbUpOffAlt } from '@mui/icons-material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Post.scss';
 import avt from '../../assets/Images/profile.png';
 import me from '../../assets/Images/me.png';
-function Post() {
+function Post({ name, avatar }) {
     const navigate = useNavigate();
-
+    const [like, setLike] = useState(false);
+    const clickLike = () => {
+        setLike(!like);
+    };
     return (
         <div className="post">
             <div className="post__header">
                 <div className="post__header-left">
                     <div className="post__avatar" onClick={() => navigate('/profile/Ranbirkapoor')}>
-                        <img src={avt} alt="" style={{ width: 50, height: 50, borderRadius: '50%' }} />
+                        <img src={avatar} alt="" style={{ width: 50, height: 50, borderRadius: '50%' }} />
                     </div>
                     <div className="post__desc">
-                        <div className="post__name">Ranbir kapoor</div>
+                        <div className="post__name">{name}</div>
                         <div className="post__time">16 hr 33 min </div>
                     </div>
                 </div>
@@ -45,7 +48,7 @@ function Post() {
             </div>
 
             <div className="post__action">
-                <div className="post__action-item">
+                <div onClick={() => clickLike()} className={`post__action-item ${like ? 'isLike' : ''}`}>
                     <ThumbUpOffAlt />
                     <div className="post__action-text">Like</div>
                 </div>
@@ -60,7 +63,7 @@ function Post() {
             </div>
 
             <div className="post__comment">
-                <div className="post__avatar">
+                <div className="post__avatar" onClick={() => navigate('/profile/me')}>
                     <img src={me} alt="" style={{ width: 40, height: 40, borderRadius: '50%' }} />
                 </div>
                 <div className="post__input">

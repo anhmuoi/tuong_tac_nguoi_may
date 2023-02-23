@@ -1,5 +1,5 @@
-import { Facebook, Google, Instagram, LinkedIn, Reorder, Search, Twitter } from '@mui/icons-material';
-import { Card, InputAdornment, TextField } from '@mui/material';
+import { Close, Facebook, Google, Instagram, LinkedIn, Reorder, Search, Twitter } from '@mui/icons-material';
+import { Button, Card, InputAdornment, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../assets/Images/Logo.png';
@@ -20,6 +20,7 @@ import new2 from '../../assets/Images/new2.png';
 import new3 from '../../assets/Images/new3.png';
 import new4 from '../../assets/Images/new4.png';
 import lgFooter from '../../assets/Images/lgFooter.svg';
+import { useSnackbar } from 'notistack';
 
 const data = [
     {
@@ -88,7 +89,7 @@ const dataCommunity = [
     },
     {
         id: 4,
-        title: 'Yniversities',
+        title: 'Universities',
         desc: "We has always been one of our most reliable partners. They provide excellent assistance, which I greatly appreciate. It's one of the best in India and the best go-to option in India for students; I strongly recommend us.",
     },
 ];
@@ -119,6 +120,8 @@ function Login() {
     const [idCommunity, setIdCommunity] = useState(1);
     const location = useLocation();
 
+    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+
     const handleClickSignup = () => {
         setIsLogin(false);
     };
@@ -130,10 +133,33 @@ function Login() {
     const onSignUp = () => {
         if (agree) {
             navigate('/');
+            enqueueSnackbar('Sign Up Successfully', {
+                variant: 'success',
+                action: (key) => (
+                    <Button onClick={() => dismissNotification(key)} color="inherit">
+                        <Close />
+                    </Button>
+                ),
+            });
         }
+    };
+
+    const dismissNotification = (key) => {
+        closeSnackbar(key);
     };
     const handleChangeCommunity = (id) => {
         setIdCommunity(id);
+    };
+    const onLogin = () => {
+        navigate('/');
+        enqueueSnackbar('Login Successfully', {
+            variant: 'success',
+            action: (key) => (
+                <Button onClick={() => dismissNotification(key)} color="inherit">
+                    <Close />
+                </Button>
+            ),
+        });
     };
 
     return (
@@ -187,7 +213,7 @@ function Login() {
                         <>
                             <div className="login__forgot">Forgot Password?</div>
 
-                            <div className="login__btn" onClick={() => navigate('/')}>
+                            <div className="login__btn" onClick={() => onLogin()}>
                                 Login
                             </div>
                         </>

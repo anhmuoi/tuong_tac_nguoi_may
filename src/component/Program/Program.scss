@@ -1,0 +1,39 @@
+.program {
+    width: 555px;
+    border-radius: 5px;
+    background-color: white;
+    &__heading {
+        font-weight: bold;
+        background-color: #f5f7fa;
+        padding: 10px;
+        border-bottom: 1px solid rgb(223, 223, 223);
+    }
+    &__text1 {
+        color: #2c2e2f;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px;
+    }
+    &__page {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 10px 20px 10px;
+        background-color: #f5f7fa;
+        border-top: 1px solid rgb(238, 225, 225);
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__title {
+        font-size: 14px;
+        color: #000;
+    }
+    &__desc {
+        font-size: 13px;
+        color: #1c1c1c;
+    }
+}

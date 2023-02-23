@@ -24,6 +24,9 @@
     }
     &__avatar {
         cursor: pointer;
+        img {
+            border-radius: 100rem;
+        }
     }
     &__desc {
         display: flex;
@@ -119,6 +122,7 @@
             color: #8c8c8c;
             &:hover {
                 color: #f05050;
+                cursor: pointer;
             }
         }
 
@@ -155,9 +159,10 @@
         align-items: center;
         cursor: pointer;
     }
-
+    .isLike {
+        color: #f05050;
+    }
     @media screen and (max-width: 767px) {
         width: 100vw;
-     }
-     
+    }
 }

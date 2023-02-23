@@ -1,0 +1,116 @@
+.inbox {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #dfe5eb;
+    height: 650px;
+    padding: 20px 200px 100px 200px;
+
+    &__left {
+        background-color: white;
+        width: 400px;
+        height: 650px;
+        z-index: 10;
+        &-header {
+            font-weight: bold;
+            background-color: #f5f7fa;
+            padding: 29px;
+            border-bottom: 1px solid rgb(223, 223, 223);
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10px 20px 10px;
+            border-bottom: 1px solid rgb(235, 233, 233);
+        }
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+            div {
+                font-weight: bold;
+            }
+        }
+        &-time {
+            font-size: 12px;
+            color: #8c8c8c;
+            margin-top: 5px;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #dee0e5;
+            padding: 10px;
+        }
+    }
+    &__chat {
+        flex: 1;
+        margin-top: 20px;
+    }
+    &__fromA {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__mess {
+        padding: 15px 25px;
+        box-sizing: border-box;
+        background: #efefef;
+        border-radius: 5px;
+        border-bottom-left-radius: 7px;
+        border-top-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+    &__time {
+        color: #8c8c8c;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    &__fromB {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        .active {
+            background: #0085fe;
+            color: #fff;
+        }
+    }
+    &__avatar {
+        border-radius: 100rem;
+    }
+    &__type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        border-top: 1px solid #dee0e5;
+    }
+    &__input {
+        border: none;
+        flex: 1;
+        padding: 10px;
+    }
+    &__input:focus {
+        outline: none;
+    }
+    &__send {
+        color: #f05050;
+    }
+}

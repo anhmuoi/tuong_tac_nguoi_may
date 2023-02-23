@@ -16,25 +16,6 @@ function ListingCourse({ data }) {
         }
     }, [isHorizontalScrollEnabled]);
 
-    const handleScrollLeft = () => {
-        const scrollDiv = document.getElementById(`imageListCourse-${data.id}`);
-        if (scrollDiv) {
-            scrollDiv.scrollBy({
-                left: -300,
-                behavior: 'smooth',
-            });
-        }
-    };
-
-    const handleScrollRight = () => {
-        const scrollDiv = document.getElementById(`imageListCourse-${data.id}`);
-        if (scrollDiv) {
-            scrollDiv.scrollBy({
-                left: 300,
-                behavior: 'smooth',
-            });
-        }
-    };
     return (
         <div className="listingCourse">
             <div className="listingCourse__heading">{data.heading}</div>
@@ -43,16 +24,6 @@ function ListingCourse({ data }) {
                     <CardCourse key={item.id} data={item} />
                 ))}
             </div>
-            {isHorizontalScrollEnabled && (
-                <div className="arrow_btn">
-                    <Fab onClick={() => handleScrollLeft()} color="default" size="small">
-                        <KeyboardArrowLeft />
-                    </Fab>
-                    <Fab onClick={() => handleScrollRight()} color="default" size="small">
-                        <KeyboardArrowRight />
-                    </Fab>
-                </div>
-            )}
         </div>
     );
 }
