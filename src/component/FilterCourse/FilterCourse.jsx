@@ -302,6 +302,10 @@ function FilterCourse({ handleCloseFilter }) {
                     </div>
                 </div>
             </div>
+
+            <div className="filterCourse__btn">
+                <div onClick={() => handleCloseFilter()}>Apply and Search</div>
+            </div>
         </div>
     );
 }
