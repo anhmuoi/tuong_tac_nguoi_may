@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import CoverProfile from '../../component/CoverProfile/CoverProfile.jsx';
 import Email from '../../component/Email/Email.jsx';
@@ -9,7 +9,7 @@ import imgMe from '../../assets/Images/me.png';
 
 function Profile() {
     const location = useLocation();
-    console.log(location.pathname.split('/')[2]);
+    
     return (
         <div className="profile">
             <div>

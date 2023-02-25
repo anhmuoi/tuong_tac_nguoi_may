@@ -3,6 +3,8 @@
     border-radius: 5px;
     background-color: white;
     &__heading {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         font-weight: bold;
         background-color: #f5f7fa;
         padding: 10px;

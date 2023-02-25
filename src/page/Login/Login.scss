@@ -28,6 +28,7 @@
     }
     &__info {
         display: flex;
+        flex-direction: row;
         align-items: center;
         &-item {
             display: flex;
@@ -35,6 +36,10 @@
             align-items: center;
             gap: 5px;
             text-align: center;
+            img {
+                width: 150px;
+                height: 100px;
+            }
         }
     }
     &__right {
@@ -43,8 +48,8 @@
     }
     &__title {
         color: #2e2e2e;
-        font-size: 17px;
-        font-weight: 500;
+        font-size: 24px;
+        font-weight: 700;
         margin-bottom: 30px;
         text-align: left !important;
     }
@@ -62,13 +67,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 7px;
+        padding: 12px 20px;
         border: 1px solid #e3dada;
         border-radius: 30px;
         flex: 1;
         input {
             border: none;
             background: none;
+            width: 100%;
         }
     }
     #input:focus {
@@ -79,7 +85,7 @@
         text-align: right;
     }
     &__btn {
-        padding: 5px 10px;
+        padding: 10px 10px;
         text-align: center;
         background-color: #f05050;
         color: white;
@@ -97,7 +103,7 @@
     &__google {
         text-align: center;
         flex: 0.5;
-        padding: 5px 10px;
+        padding: 6px 10px;
         border: 1px solid #b0b5bc;
         border-radius: 30px;
         cursor: pointer;
@@ -246,6 +252,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        div > img {
+            height: 35px;
+            margin-bottom: 10px;
+        }
     }
     &__body {
         display: flex;

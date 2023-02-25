@@ -14,7 +14,7 @@
     &__text2 {
         font-size: 13px;
         font-weight: 400;
-        color: #8c8c8c
+        color: #8c8c8c;
     }
     &__img {
         margin-top: 30px;
@@ -61,5 +61,10 @@
         border-radius: 20px;
         padding: 3px 10px;
         text-align: center;
+
+        &:hover {
+            color: red;
+            cursor: pointer;
+        }
     }
 }

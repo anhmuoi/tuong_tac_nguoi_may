@@ -14,33 +14,33 @@ import {
     Save,
     Snowshoeing,
     Star,
-} from '@mui/icons-material';
-import { Box, List, Modal, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import './LeftSideBar.scss';
-import me from '../../assets/Images/me.png';
-import { useNavigate } from 'react-router-dom';
+} from "@mui/icons-material";
+import { Box, List, Modal, Typography } from "@mui/material";
+import React, { useState } from "react";
+import "./LeftSideBar.scss";
+import me from "../../assets/Images/me.png";
+import { useNavigate } from "react-router-dom";
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '40%',
-    bgcolor: 'background.paper',
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "40%",
+    bgcolor: "background.paper",
     boxShadow: 24,
 };
 
 function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
     const [openModal, setOpenModal] = useState(false);
-    const [title, setTitle] = useState('');
-    const [name, setName] = useState('');
+    const [title, setTitle] = useState("");
+    const [name, setName] = useState("");
     const [select, setSelect] = useState(0);
     const navigate = useNavigate();
 
     const handleClickCourse = (text) => {
-        if (text === 'Courses') {
-            navigate('course');
+        if (text === "Courses") {
+            navigate("course");
         }
     };
 
@@ -53,7 +53,9 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
     };
 
     const handleOpenCreatePage = (id) => {
-        if (id === 2) {
+        if (id === 1) {
+            navigate("/profile/me/page");
+        } else if (id === 2) {
             setOpenModal(true);
         }
     };
@@ -69,10 +71,20 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
                     <div className="create__body">
                         <div>Just select a page type to get started.</div>
                         <div className="create__select">
-                            <div className={`${select === 0 ? 'create__active' : ''}`} onClick={() => setSelect(0)}>
+                            <div
+                                className={`${
+                                    select === 0 ? "create__active" : ""
+                                }`}
+                                onClick={() => setSelect(0)}
+                            >
                                 <GppBad /> Private
                             </div>
-                            <div className={`${select === 1 ? 'create__active' : ''}`} onClick={() => setSelect(1)}>
+                            <div
+                                className={`${
+                                    select === 1 ? "create__active" : ""
+                                }`}
+                                onClick={() => setSelect(1)}
+                            >
                                 <Public /> Public
                             </div>
                         </div>
@@ -114,7 +126,12 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
                     </div>
 
                     <div className="create__next">
-                        <p className={`${name && title ? 'create__active' : ''}`} onClick={() => navigate(`/page/${title}`)}>
+                        <p
+                            className={`${
+                                name && title ? "create__active" : ""
+                            }`}
+                            onClick={() => navigate(`/page/${title}`)}
+                        >
                             Next
                         </p>
                     </div>
@@ -123,10 +140,24 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
             {!isFanPage && (
                 <>
                     <div className="leftSide__info">
-                        <div className="logo" onClick={() => navigate('/profile/me')}>
-                            <img src={me} alt="" style={{ width: 50, height: 50, borderRadius: '50%' }} />
+                        <div
+                            className="logo"
+                            onClick={() => navigate("/profile/me")}
+                        >
+                            <img
+                                src={me}
+                                alt=""
+                                style={{
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: "50%",
+                                }}
+                            />
                         </div>
-                        <div className="name">
+                        <div
+                            className="name"
+                            onClick={() => navigate("/profile/me")}
+                        >
                             <div className="name_acc">Nguyễn Mười</div>
                             <div className="name_edit">Edit profile</div>
                         </div>
@@ -166,7 +197,13 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
                         <p className="leftSide__page-title">Pages</p>
                         <div className="leftSide__action">
                             {dataPage.map((item, key) => (
-                                <div key={key} className="leftSide__action-item" onClick={() => handleOpenCreatePage(item.id)}>
+                                <div
+                                    key={key}
+                                    className="leftSide__action-item"
+                                    onClick={() =>
+                                        handleOpenCreatePage(item.id)
+                                    }
+                                >
                                     <div>{item.icon}</div>
                                     <div>{item.text}</div>
                                 </div>
@@ -181,7 +218,11 @@ function LeftSideBar({ dataAction, dataPage, dataProduct, isFanPage }) {
                         <p className="leftSide__page-title">Products</p>
                         <div className="leftSide__action">
                             {dataProduct.map((item, key) => (
-                                <div key={key} className="leftSide__action-item" onClick={() => handleClickCourse(item.text)}>
+                                <div
+                                    key={key}
+                                    className="leftSide__action-item"
+                                    onClick={() => handleClickCourse(item.text)}
+                                >
                                     <div>{item.icon}</div>
                                     <div>{item.text}</div>
                                 </div>

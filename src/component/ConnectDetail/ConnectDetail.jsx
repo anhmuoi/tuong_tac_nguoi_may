@@ -1,87 +1,87 @@
-import React from 'react';
-import './ConnectDetail.scss';
-import connectPeople from '../../assets/Images/connect-people.png';
-import Email from '../Email/Email.jsx';
-import { PersonAddAlt1 } from '@mui/icons-material';
+import React from "react";
+import "./ConnectDetail.scss";
+import connectPeople from "../../assets/Images/connect-people.png";
+import Email from "../Email/Email.jsx";
+import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 
 const data = [
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
     {
         img: connectPeople,
-        name: 'Naveen Kumar',
-        company: 'Educator & Learner',
-        time: 'Active 15 hr 9 min',
+        name: "Naveen Kumar",
+        company: "Educator & Learner",
+        time: "Active 15 hr 9 min",
     },
 ];
 
@@ -99,14 +99,20 @@ function ConnectDetail() {
                                 </div>
                                 <div className="connectDetail__info">
                                     <div className="connectDetail__info-right">
-                                        <div className="connectDetail__name">{item.name}</div>
-                                        <div className="connectDetail__company">{item.company}</div>
-                                        <div className="connectDetail__time">{item.time}</div>
+                                        <div className="connectDetail__name">
+                                            {item.name}
+                                        </div>
+                                        <div className="connectDetail__company">
+                                            {item.company}
+                                        </div>
+                                        <div className="connectDetail__time">
+                                            {item.time}
+                                        </div>
                                     </div>
                                     <div className="connectDetail__info-left">
                                         <div className="connectDetail__connect">
-                                            <PersonAddAlt1 />
-                                            <div>Connect</div>
+                                            <PersonRemoveIcon />
+                                            <div>Disconnect</div>
                                         </div>
                                     </div>
                                 </div>

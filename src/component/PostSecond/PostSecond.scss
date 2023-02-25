@@ -102,7 +102,7 @@
     }
 
     &__link {
-        background-image: url('https://miro.medium.com/max/1000/1*tVSuqLKoo9xbmLW0cai0mg.png');
+        background-image: url("https://miro.medium.com/max/1000/1*tVSuqLKoo9xbmLW0cai0mg.png");
         background-size: contain;
         width: 100%;
         height: 111px;
@@ -132,11 +132,18 @@
     }
 
     &__comment {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         padding: 5px 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #f5f7fa;
+
+        div:last-child {
+            margin-left: 7px;
+            margin-right: 5px;
+        }
     }
     &__input {
         display: flex;

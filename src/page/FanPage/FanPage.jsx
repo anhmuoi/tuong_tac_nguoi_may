@@ -1,13 +1,25 @@
-import { Add, BarChart, Block, Category, Chat, Collections, Info, Notifications, PersonAddAlt1, Reviews, Subtitles } from '@mui/icons-material';
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import imgCover from '../../assets/Images/coverimage.jpg';
-import imgProfile from '../../assets/Images/organization_profile.svg';
-import AddQuestion from '../../component/AddQuestion/AddQuestion.jsx';
-import CoverProfile from '../../component/CoverProfile/CoverProfile.jsx';
-import LeftSideBar from '../../component/LeftSideBar/LeftSideBar.jsx';
-import './FanPage.scss';
-import otherProfile from '../../assets/Images/rcm.png';
+import {
+    Add,
+    BarChart,
+    Block,
+    Category,
+    Chat,
+    Collections,
+    Info,
+    Notifications,
+    PersonAddAlt1,
+    Reviews,
+    Subtitles,
+} from "@mui/icons-material";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import imgCover from "../../assets/Images/coverimage.jpg";
+import imgProfile from "../../assets/Images/organization_profile.svg";
+import AddQuestion from "../../component/AddQuestion/AddQuestion.jsx";
+import CoverProfile from "../../component/CoverProfile/CoverProfile.jsx";
+import LeftSideBar from "../../component/LeftSideBar/LeftSideBar.jsx";
+import "./FanPage.scss";
+import otherProfile from "../../assets/Images/rcm.png";
 import {
     AccountCircle,
     Article,
@@ -24,62 +36,62 @@ import {
     Save,
     Snowshoeing,
     Star,
-} from '@mui/icons-material';
-import Review from '../../component/Review/Review.jsx';
-import RelatePage from '../../component/RelatePage/RelatePage.jsx';
-import Tip from '../../component/Tip/Tip.jsx';
-import FirstCourse from '../../component/FirstCourse/FirstCourse.jsx';
-import noPost from '../../assets/Images/no_post.svg';
-import otherPageBg from '../../assets/Images/otherPageBg.png';
-import Course from '../../component/Course/Course.jsx';
-import PostSecond from '../../component/PostSecond/PostSecond.jsx';
-import Post from '../../component/Post/Post.jsx';
+} from "@mui/icons-material";
+import Review from "../../component/Review/Review.jsx";
+import RelatePage from "../../component/RelatePage/RelatePage.jsx";
+import Tip from "../../component/Tip/Tip.jsx";
+import FirstCourse from "../../component/FirstCourse/FirstCourse.jsx";
+import noPost from "../../assets/Images/no_post.svg";
+import otherPageBg from "../../assets/Images/bg-cover.png";
+import Course from "../../component/Course/Course.jsx";
+import PostSecond from "../../component/PostSecond/PostSecond.jsx";
+import Post from "../../component/Post/Post.jsx";
 
 const dataAction = [
     {
         id: 1,
         icon: <Subtitles />,
-        text: 'Latest Feed',
+        text: "Latest Feed",
     },
     {
         id: 2,
         icon: <Article></Article>,
-        text: 'Articles',
+        text: "Articles",
     },
     {
         id: 3,
         icon: <Create></Create>,
-        text: 'Question',
+        text: "Question",
     },
     {
         id: 4,
         icon: <Category />,
-        text: 'Products',
+        text: "Products",
     },
     {
         id: 5,
         icon: <Notifications />,
-        text: 'Notification',
+        text: "Notification",
     },
     {
         id: 6,
         icon: <Info />,
-        text: 'About',
+        text: "About",
     },
     {
         id: 7,
         icon: <BarChart />,
-        text: 'Analytics',
+        text: "Analytics",
     },
     {
         id: 8,
         icon: <Reviews></Reviews>,
-        text: 'Review',
+        text: "Review",
     },
     {
         id: 9,
         icon: <Collections />,
-        text: 'Gallery',
+        text: "Gallery",
     },
 ];
 
@@ -89,7 +101,7 @@ function FanPage({ name }) {
     const [isOtherPage, setIsOtherPage] = useState(false);
 
     useEffect(() => {
-        if (location.hash === '#otherPage') {
+        if (location.hash === "#otherPage") {
             setIsOtherPage(true);
         }
     }, []);
@@ -101,8 +113,9 @@ function FanPage({ name }) {
                     isFanPage
                     imgCover={isOtherPage ? otherPageBg : imgCover}
                     imgProfile={isOtherPage ? otherProfile : imgProfile}
-                    name={location.pathname.split('/')[2]}
+                    name={location.pathname.split("/")[2]}
                     follower={12033}
+                    member={5}
                 />
             </div>
             <div className="fanPage__container">
@@ -113,8 +126,14 @@ function FanPage({ name }) {
                     {isOtherPage ? (
                         <>
                             <Course title="Courses" />
-                            <PostSecond avatar={otherProfile} name={location.pathname.split('/')[2]} />
-                            <Post avatar={otherProfile} name={location.pathname.split('/')[2]}></Post>
+                            <PostSecond
+                                avatar={otherProfile}
+                                name={location.pathname.split("/")[2]}
+                            />
+                            <Post
+                                avatar={otherProfile}
+                                name={location.pathname.split("/")[2]}
+                            ></Post>
                         </>
                     ) : (
                         <>
@@ -124,7 +143,9 @@ function FanPage({ name }) {
                             <div className="noPost">
                                 <div>
                                     <img src={noPost} alt="" />
-                                    <div className="noPost__text">No posts to show</div>
+                                    <div className="noPost__text">
+                                        No posts to show
+                                    </div>
                                 </div>
                             </div>
                         </>

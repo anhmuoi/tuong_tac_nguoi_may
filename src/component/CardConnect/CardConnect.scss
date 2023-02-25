@@ -30,6 +30,12 @@
         font-size: 12px;
         width: 60%;
         margin: 0 auto;
+
+        &:hover {
+            cursor: pointer;
+            color: red;
+            background-color: #dfe5eb;
+        }
     }
     &__text {
         font-weight: bold;

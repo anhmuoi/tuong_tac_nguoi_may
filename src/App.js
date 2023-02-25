@@ -8,6 +8,7 @@ import About from './component/About/About.jsx';
 import ProfileDetail from './component/ProfileDetail/ProfileDetail.jsx';
 import ConnectDetail from './component/ConnectDetail/ConnectDetail.jsx';
 import ProfilePage from './component/ProfilePage/ProfilePage.jsx';
+import ProfileCourse from "./component/ProfileCourse/ProfileCourse.jsx";
 import LeaderBoard from './page/LeaderBoard/LeaderBoard.jsx';
 import Course from './page/Course/Course.jsx';
 import Login from './page/Login/Login.jsx';
@@ -27,6 +28,7 @@ function App() {
                         <Route path="about" element={<About />}></Route>
                         <Route path="connection" element={<ConnectDetail />}></Route>
                         <Route path="page" element={<ProfilePage />}></Route>
+                        <Route path="course" element={<ProfileCourse />}></Route>
                     </Route>
                     <Route path="page/:name" element={<FanPage />}></Route>
                     <Route path="leader-board" element={<LeaderBoard />}></Route>

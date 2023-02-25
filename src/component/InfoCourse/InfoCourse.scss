@@ -4,7 +4,8 @@
     background-color: white;
     padding-bottom: 10px;
     &__heading {
-
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         font-weight: bold;
         background-color: #f5f7fa;
         padding: 10px;

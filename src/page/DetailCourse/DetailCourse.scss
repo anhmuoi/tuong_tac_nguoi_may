@@ -9,11 +9,29 @@
         &-page {
             width: 278px;
             background-color: white;
-            border-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
             display: flex;
             align-items: center;
             gap: 10px;
             padding: 10px;
+            margin-bottom: 25px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &-auth {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: 500;
+            line-height: 18px;
+            color: #2c2e2f;
+            padding: 5px;
+            background-color: #fff;
+            border-bottom: 0.25px solid rgba(128, 128, 128, 0.436);
+            display: flex;
+            justify-content: center;
         }
         &-avatar {
             display: inline-block;

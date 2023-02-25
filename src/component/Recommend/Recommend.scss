@@ -53,13 +53,19 @@
         justify-content: center;
         align-items: center;
         padding: 10px 0;
+        &:hover {
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
     }
     &__follow {
-        padding: 5px 10px;
-        border-radius: 30px;
+        padding: 5px 15px;
+        border-radius: 20px;
         border: 1px solid rgb(223, 223, 223);
         &:hover {
             background-color: #e5e3e3;
+            color: red;
             cursor: pointer;
         }
     }
