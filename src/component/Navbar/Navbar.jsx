@@ -74,7 +74,8 @@ function Navbar() {
                 </div>
                 <div className="nav__search">
                     <TextField
-                        style={{ backgroundColor: '#EDF1F4' }}
+                        fullWidth
+                        style={{  backgroundColor: '#EDF1F4' }}
                         variant="outlined"
                         InputProps={{
                             startAdornment: (
@@ -83,7 +84,7 @@ function Navbar() {
                                 </InputAdornment>
                             ),
                         }}
-                        placeholder="search"
+                        placeholder="Search"
                     ></TextField>
                 </div>
                 <div className="nav__page">
