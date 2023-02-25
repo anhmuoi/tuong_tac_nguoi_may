@@ -1,23 +1,18 @@
 .nav {
-    position: sticky;
-    top: 0;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-    padding: 8px 10%;
-    max-width: 100%;
+    padding: 8px 0;
+    max-width: 80%;
     margin: 0 auto;
     align-items: center;
-    z-index: 100;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     &__logo {
         img {
             float: left;
             margin-right: 35px;
             padding-top: 3px;
             margin-top: 3px;
-            width: 150px !important;
-            height: 30px !important;
+            width: 120px !important;
             position: relative !important;
             top: -5px !important;
         }
@@ -25,7 +20,7 @@
     }
     &__search {
         // height: 35px;
-        width: 350px;
+        width: 230px;
         input {
             padding: 9.5px 14px !important;
         }
@@ -67,11 +62,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        justify-content: space-between;
-        background-color: #fff;
-        padding: 7px 0;
-        max-width: 80%;
-        align-items: center;
         .active {
             background-color: #f05050;
             color: white;
@@ -79,9 +69,8 @@
     }
     &__login,
     &__signUp {
-        width: 100px;
-        text-align: center;
-        padding: 7px 10px;
+        padding: 5px 10px;
+        padding: 5px 10px;
         border-radius: 20px;
         border: 1px solid #dfe0e8;
         background-color: #f0f0f0;
@@ -103,8 +92,6 @@
             background-color: #f5f7fa;
             padding: 10px;
             border-bottom: 1px solid rgb(223, 223, 223);
-            display: flex;
-            justify-content: space-between;
         }
         &-item {
             display: flex;
@@ -125,23 +112,19 @@
                 font-weight: bold;
             }
         }
-        &-notileft {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            img {
-                width: 40px;
-                height: 40px;
-            }
-            div > span {
-                font-size: 16px;
-                font-weight: bold;
-            }
-        }
         &-time {
             font-size: 12px;
             color: #8c8c8c;
             margin-top: 5px;
+        }
+        &-go {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #f5f7fa;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     &__logout {
